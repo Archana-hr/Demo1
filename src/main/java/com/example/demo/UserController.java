@@ -14,7 +14,7 @@ import com.example.demo.service.IUserService;
 public class UserController {
 	@Autowired
 	IUserService userService;
-//comments
+
 	@GetMapping("/user")
 	String getUser() {
 		System.out.println("testing");
