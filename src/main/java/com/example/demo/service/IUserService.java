@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.UserRepository;
@@ -11,6 +12,13 @@ public class IUserService {
 	UserRepository userRepository;
 	public void saveUser(User user) {
 		userRepository.save(user);
+	}
+	public Iterable<User> getUsers()
+	{
+		return userRepository.findAll();
+	}
+	public Optional<User> getUser(Integer id){
+		return userRepository.findById(id);
 	}
 
 }
