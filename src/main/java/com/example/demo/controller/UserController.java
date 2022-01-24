@@ -43,8 +43,9 @@ public class UserController {
 	}
 	
 
-	@DeleteMapping("/user")
-	void deleteUser() {
+	@DeleteMapping("/user/{id}")
+	void deleteUser(@PathVariable("id") Integer id) {
+		userService.deleteUser(id);
 		// TODO Auto-generated method stub
 
 	}
